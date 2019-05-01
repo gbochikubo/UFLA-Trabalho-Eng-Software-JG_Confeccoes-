@@ -1,0 +1,32 @@
+Requisitos Funcionais
+
+1- O usuário deverá ser capaz de se cadastrar.
+	1.1- O software deve permitir o registro do nome;
+	1.2- O software deve permitir o registro do e-mail;
+	1.3- O software deve permitir o registro de senha;
+	1.4- O software deve permitir o registro de endereço.
+
+2- O usuário deverá ser capaz de realizar login.
+	2.1- O software deve permitir a inserção de email;
+	2.2- O software deve permitir a inserção de senha.
+
+3- O usuário deverá ser capaz de buscar itens do catálogo.
+	3.1- O software deve permitir a inserção do nome do produto a ser buscado.
+
+4- O software deverá ser capaz de adicionar novos itens ao catálogo.
+
+5- O software deverá ser capaz de remover itens do catálogo.
+
+6- O software deverá permitir que o usuário controle seu carrinho de compras.
+	6.1- O software deverá permitir que o usuário adicione itens ao carrinho;
+	6.2- O software deverá permitir que o usuário remova itens do carrinho.
+
+7- O software deverá permitir que o usuário finalize uma compra.
+	7.1- O software deve permitir a inserção do número do cartão.
+	7.2- O software deve permitir a inserção do código de segurança do cartão.
+	7.3- O software deve permitir a inserção da data de validade do cartão.
+	7.4- O software deve permitir a inserção do nome presente no cartão.
+
+8- O software deverá ser capaz de gerar um relatório de vendas de um dia específico.
+	8.1- O software deve permitir a inserção da data para geração do relatório.
+
