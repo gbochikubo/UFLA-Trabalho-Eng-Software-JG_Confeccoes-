@@ -1,27 +1,21 @@
-Requisitos N„o Funcionais
-
-Identificador: RF001
-Nome: Facilidade de uso
-DescriÁ„o: O software dever· ter uma interface simples e de f·cil utilizaÁ„o, podendo ser utilizado por pessoas leigas.
-Necessidade: Alta
-REQUISITOS N√O FUNCIONAIS
+REQUISITOS N√ÉO FUNCIONAIS
 
 Identificador: RNF001
 Nome: Facilidade de uso
-DescriÁ„o: O software dever· ter uma interface simples e de f·cil utilizaÁ„o, podendo ser utilizado por pessoas leigas.
+Descri√ß√£o: O software dever√° ter uma interface simples e de f√°cil utiliza√ß√£o, podendo ser utilizado por pessoas leigas.
 Necessidade: Alta
 
 Identificador: RNF002
-Nome: SeguranÁa
-DescriÁ„o: O software dever· manter os dados e a conta do cliente seguro.
+Nome: Seguran√ßa
+Descri√ß√£o: O software dever√° manter os dados e a conta do cliente seguro.
 Necessidade: Alta
 
 Identificador: RNF003
 Nome: Disponibilidade
-DescriÁ„o: O software n„o dever· sair do ar.
+Descri√ß√£o: O software n√£o dever√° sair do ar.
 Necessidade: Alta
 
 Identificador: RNF004
-Nome: Facilidade de manutenÁ„o 
-DescriÁ„o: O software dever· ser de f·cil manutenÁ„o.
+Nome: Facilidade de manuten√ß√£o 
+Descri√ß√£o: O software dever√° ser de f√°cil manuten√ß√£o.
 Necessidade: Alta
