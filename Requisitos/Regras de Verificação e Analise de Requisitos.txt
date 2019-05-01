@@ -1,0 +1,2 @@
+O detalhamento dos requisitos deverá ser feito de forma sucinta e direta, evitando ambiguidade e esclarecendo as funcionalidades que devem estar presentes no software.
+Deverá conter apenas o nível de detalhamento necessário para que seja compreendido e evitar sentenças muito grandes.
