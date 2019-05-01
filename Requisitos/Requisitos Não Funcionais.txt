@@ -1,0 +1,27 @@
+Requisitos Não Funcionais
+
+Identificador: RF001
+Nome: Facilidade de uso
+Descrição: O software deverá ter uma interface simples e de fácil utilização, podendo ser utilizado por pessoas leigas.
+Necessidade: Alta
+REQUISITOS NÃO FUNCIONAIS
+
+Identificador: RNF001
+Nome: Facilidade de uso
+Descrição: O software deverá ter uma interface simples e de fácil utilização, podendo ser utilizado por pessoas leigas.
+Necessidade: Alta
+
+Identificador: RNF002
+Nome: Segurança
+Descrição: O software deverá manter os dados e a conta do cliente seguro.
+Necessidade: Alta
+
+Identificador: RNF003
+Nome: Disponibilidade
+Descrição: O software não deverá sair do ar.
+Necessidade: Alta
+
+Identificador: RNF004
+Nome: Facilidade de manutenção 
+Descrição: O software deverá ser de fácil manutenção.
+Necessidade: Alta
