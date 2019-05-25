@@ -1,2 +1,11 @@
-O detalhamento dos requisitos dever� ser feito de forma sucinta e direta, evitando ambiguidade e esclarecendo as funcionalidades que devem estar presentes no software.
-Dever� conter apenas o n�vel de detalhamento necess�rio para que seja compreendido e evitar senten�as muito grandes.
+Regras e Especificação dos Requisitos.
+
+1-O detalhamento dos requisitos deverá ser feito de forma sucinta e direta, evitando ambiguidade e esclarecendo as funcionalidades que devem estar presentes no software.
+
+2-Deverá ser definido apenas 1 requisito por vez.
+
+3- Evitar as palavras: E, OU, SOMENTE SE, EXCETO, SE NECESSÁRIO, MAS, CONTUDO, ENTRETANDO, USUALMENTE,
+GERALMENTE, FREQUENTEMENTE, TIPICAMENTE, AMIGÁVEL, VERSÁTIL, FLEXÍVEL, APROXIMADAMENTE,
+TÃO LOGO QUANTO POSSÍVEL, TALVEZ, PROVAVELMENTE ou palavras que forneçam a mesma idéia que essas;
+
+4-Deverá conter apenas o nível de detalhamento necessário para que seja compreendido e evitar sentenças muito grandes.
