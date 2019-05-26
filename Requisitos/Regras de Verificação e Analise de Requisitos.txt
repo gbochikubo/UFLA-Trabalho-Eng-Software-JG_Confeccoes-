@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Regras e Especificação dos Requisitos.
 
 1-O detalhamento dos requisitos deverá ser feito de forma sucinta e direta, evitando ambiguidade e esclarecendo as funcionalidades que devem estar presentes no software.
@@ -10,16 +9,4 @@ GERALMENTE, FREQUENTEMENTE, TIPICAMENTE, AMIGÁVEL, VERSÁTIL, FLEXÍVEL, APROXIMAD
 TÃO LOGO QUANTO POSSÍVEL, TALVEZ, PROVAVELMENTE ou palavras que forneçam a mesma idéia que essas;
 
 4-Deverá conter apenas o nível de detalhamento necessário para que seja compreendido e evitar sentenças muito grandes.
-=======
-Regras e EspecificaÃ§Ã£o dos Requisitos.
 
-1-O detalhamento dos requisitos deverÃ¡ ser feito de forma sucinta e direta, evitando ambiguidade e esclarecendo as funcionalidades que devem estar presentes no software.
-
-2-DeverÃ¡ ser definido apenas 1 requisito por vez.
-
-3- Evitar as palavras: E, OU, SOMENTE SE, EXCETO, SE NECESSÃRIO, MAS, CONTUDO, ENTRETANDO, USUALMENTE,
-GERALMENTE, FREQUENTEMENTE, TIPICAMENTE, AMIGÃVEL, VERSÃTIL, FLEXÃVEL, APROXIMADAMENTE,
-TÃƒO LOGO QUANTO POSSÃVEL, TALVEZ, PROVAVELMENTE ou palavras que forneÃ§am a mesma idÃ©ia que essas;
-
-4-DeverÃ¡ conter apenas o nÃ­vel de detalhamento necessÃ¡rio para que seja compreendido e evitar sentenÃ§as muito grandes.
->>>>>>> df7d5246515daf6fbfabdfc7e540eb2369920335
