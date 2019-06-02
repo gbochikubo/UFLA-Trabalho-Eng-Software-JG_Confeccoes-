@@ -1,32 +1,52 @@
 Requisitos Funcionais
 
-1- O usu·rio dever· ser capaz de se cadastrar.
+1- O usu√°rio dever√° ser capaz de se cadastrar.
 	1.1- O software deve permitir o registro do nome;
 	1.2- O software deve permitir o registro do e-mail;
 	1.3- O software deve permitir o registro de senha;
-	1.4- O software deve permitir o registro de endereÁo.
+	1.4- O software deve permitir o registro de endere√ßo.
+	1.5- O software deve perimirt o registro do cpf.
 
-2- O usu·rio dever· ser capaz de realizar login.
-	2.1- O software deve permitir a inserÁ„o de email;
-	2.2- O software deve permitir a inserÁ„o de senha.
+2- O usu√°rio dever√° ser capaz de realizar login.
+	2.1- O software deve permitir a inser√ß√£o de email;
+	2.2- O software deve permitir a inser√ß√£o de senha.
 
-3- O usu·rio dever· ser capaz de buscar itens do cat·logo.
-	3.1- O software deve permitir a inserÁ„o do nome do produto a ser buscado.
+3- O usu√°rio dever√° ser capaz de alterar dados.
+	3.1- O software deve permitir a altera√ß√£o do nome;
+	3.2- O software deve permitir a altera√ß√£o do e-mail;
+	3.3- O software deve permitir a altera√ß√£o de senha;
+	3.4- O software deve permitir a altera√ß√£o de endere√ßo.
 
-4- O software dever· ser capaz de adicionar novos itens ao cat·logo.
+4- O usu√°rio dever√° ser capaz de excluir a conta.
 
-5- O software dever· ser capaz de remover itens do cat·logo.
+5- O usu√°rio dever√° ser capaz de buscar itens do cat√°logo.
+	5.1- O software deve permitir a inser√ß√£o do nome do produto a ser buscado.
 
-6- O software dever· permitir que o usu·rio controle seu carrinho de compras.
-	6.1- O software dever· permitir que o usu·rio adicione itens ao carrinho;
-	6.2- O software dever· permitir que o usu·rio remova itens do carrinho.
+6- O software dever√° ser capaz de adicionar novos itens ao cat√°logo.
 
-7- O software dever· permitir que o usu·rio finalize uma compra.
-	7.1- O software deve permitir a inserÁ„o do n˙mero do cart„o.
-	7.2- O software deve permitir a inserÁ„o do cÛdigo de seguranÁa do cart„o.
-	7.3- O software deve permitir a inserÁ„o da data de validade do cart„o.
-	7.4- O software deve permitir a inserÁ„o do nome presente no cart„o.
+7- O software dever√° ser capaz de remover itens do cat√°logo.
 
-8- O software dever· ser capaz de gerar um relatÛrio de vendas de um dia especÌfico.
-	8.1- O software deve permitir a inserÁ„o da data para geraÁ„o do relatÛrio.
+8- O software dever√° ser capaz de alterar itens do cat√°logo.
+
+9- O software dever√° permitir que o usu√°rio adicione itens ao carrinho.
+
+10- O software dever√° permitir que o usu√°rio remova itens do carrinho.
+
+11- O software dever√° permitir que o usu√°rio finalize uma compra.
+	11.1- O software deve permitir a inser√ß√£o do n√∫mero do cart√£o.
+	11.2- O software deve permitir a inser√ß√£o do c√≥digo de seguran√ßa do cart√£o.
+	11.3- O software deve permitir a inser√ß√£o da data de validade do cart√£o.
+	11.4- O software deve permitir a inser√ß√£o do nome presente no cart√£o.
+	11.5- O software deve permitir a escolha do tipo de entrega.
+
+12- O software dever√° ser capaz de gerar um relat√≥rio de vendas de um dia espec√≠fico.
+	13.1- O software deve permitir a inser√ß√£o da data para gera√ß√£o do relat√≥rio.
+
+13- O usu√°rio dever√° ser capaz de realizar um pedido.
+
+14- O usu√°rio dever√° ser capaz de cancelar um pedido.
+
+15- O usu√°rio dever√° ser capaz de buscar um pedido.
+
+
 
