@@ -6,7 +6,8 @@ Desenvolvido com a linguagem SQL com interface feita em PHP/HTML .
 O software devera ser capaz de cadastrar clientes, inserir produtos, excluir clientes, excluir produtos e permitir que o cliente faça compra de produtos.
 # <h3> Regras e Padrões de uso do Git <h3>
   <li> Sempre deverá ser informado as alterações realizadas no commit, por exemplo:
-     Alterado Front-End (nome do arquivo/classe), incluído x, alterado y, removido z;
+    
+    Alterado Front-End (nome do arquivo/classe), incluído x, alterado y, removido z;
 
     Removido (nome do arquivo/classe/método), pelo motivo x...;
 
