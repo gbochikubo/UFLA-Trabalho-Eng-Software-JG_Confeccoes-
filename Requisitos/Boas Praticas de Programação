@@ -1,0 +1,13 @@
+# Boas Práticas de Programação
+
+# <h3> 1- Identar o código <h3>
+  O código deverá ser identado de forma legivel e consistente.
+  
+  <h3> 2- Evitar comentários Obvios <h3>
+  Comentários deverão ser feitos sempre que necessário, mas nunca de maneira obvia e redundante, dessa forma evitando a poluição do código.
+  
+  <h3> 3- Nomear váriaveis de maneira intuitiva <h3>
+  As váriaveis deverão ser nomeadas de maneira intuitiva, de forma a fazer sentindo no escopo do código, evitando váriaveis como x,y,z.
+
+  <h3> 4 - Tratamento de erros (try/catch) <h4>
+  Deverão ser implementados tratamento de erros de forma a facilitar a identificação de erros lógicos.
