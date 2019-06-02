@@ -1,21 +1,17 @@
 ﻿REQUISITOS NÃO FUNCIONAIS
 
 Identificador: RNF001
-Nome: Facilidade de uso
-Descrição: O software deverá ter uma interface simples e de fácil utilização, para isso deverão ser usados princípios básicos de usabilidade na implementação do sistema.
-Necessidade: Alta
-
-Identificador: RNF002
 Nome: Segurança
 Descrição: O software deverá manter os dados e a conta do cliente seguro, através da criptografia do banco de dados.
 Necessidade: Alta
 
-Identificador: RNF003
+Identificador: RNF002
 Nome: Compatibilidade
 Descrição: O deverá ser compativel com os sistemas operacionais windows e linux.
 Necessidade: Alta
 
-Identificador: RNF004
+Identificador: RNF003
 Nome: Implementação 
 Descrição: o software deverá ser desenvolvido com a linguagem SQL com interface feita em PHP/HTML.
 Necessidade: Alta
+
