@@ -26,7 +26,7 @@
       }
 
       public function buscarItem($nomeItem,$link){
-        $query = "SELECT * FROM `item` WHERE Nome = '".$nomeItem."'";
+        $query = "SELECT * FROM `item` WHERE Nome like '%".$nomeItem."%'";
         $r = mysqli_query($link, $query);
         if (!$r) {
   				echo "Erro do banco de dados, não foi possível consultar o banco de dados\n";
