@@ -1,9 +1,9 @@
 <?php
-
+  //Classe item responsável pela instância de um item no sistema
   class Item{
-    var $nome, $tamanho, $categoria, $preco,$quantidade;
+    private $nome, $tamanho, $categoria, $preco,$quantidade;
 
-    function __construct($umNome,$umTamanho,$umaCategoria,$umPreco,$umaQuantidade){
+    public function __construct($umNome,$umTamanho,$umaCategoria,$umPreco,$umaQuantidade){
       $this->nome = $umNome;
       $this->tamanho = $umTamanho;
       $this->categoria = $umaCategoria;
@@ -11,51 +11,50 @@
       $this->quantidade = $umaQuantidade;
     }
 
-    function getNome(){
+    public function getNome(){
       return $this->nome;
     }
 
-    function setNome($umNome){
+    public function setNome($umNome){
       $this->nome = $umNome;
     }
 
-    function getTamanho(){
+    public function getTamanho(){
       return $this->tamanho;
     }
 
-    function setTamanho($umTamanho){
+    public function setTamanho($umTamanho){
       $this->tamanho = $umTamanho;
     }
 
-    function getCategoria(){
+    public function getCategoria(){
       return $this->categoria;
     }
 
-    function setCategoria($umaCategoria){
+    public function setCategoria($umaCategoria){
       $this->categoria = $umaCategoria;
     }
 
-    function getPreco(){
+    public function getPreco(){
       return $this->preco;
     }
 
-    function setPreco($umPreco){
+    public function setPreco($umPreco){
       $this->preco = $umPreco;
     }
 
-    function getQuantidade(){
+    public function getQuantidade(){
       return $this->quantidade;
     }
 
-    function setQuantidade($umaQuantidade){
+    public function setQuantidade($umaQuantidade){
       $this->quantidade = $umaQuantidade;
     }
-    function imprimirItem(){
+
+    //Função responsável pela impressão dos itens
+    public function imprimirItem(){
       echo $this->nome." , ".$this->tamanho." , "
         .$this->categoria." , ".$this->preco." , ".$this->quantidade;
     }
-
-
   }
-
  ?>

@@ -2,6 +2,7 @@
 	  include_once("../../Persistence/Connection.php");
 	  include_once("../../Persistence/itemDAO.php");
 
+		//Página de controle responsável pela alteração de um determinado item
     session_start();
     $umId = $_SESSION['id'];
 
