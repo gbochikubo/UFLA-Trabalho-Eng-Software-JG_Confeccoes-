@@ -1,6 +1,7 @@
 <?php include_once("../../Model/Item.php");
 	  include_once("../../Persistence/Connection.php");
 	  include_once("../../Persistence/itemDAO.php");
+
 	//Página de controle responsável pelo cadastro de um determinado item
 	$umNome= $_POST['nomeItem'];
 	$umTamanho= $_POST['tamanhoItem'];

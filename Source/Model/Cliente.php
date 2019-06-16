@@ -36,8 +36,9 @@
     public function getTelefone(){
       return $this->telefone;
     }
-    public function getTelefone($umTelefone){
-      $this->telefone = $umTelefone ;
+
+    public function setTelefone($umTelefone){
+      $this->telefone = $umTelefone;
     }
 
     public function getEndereco(){

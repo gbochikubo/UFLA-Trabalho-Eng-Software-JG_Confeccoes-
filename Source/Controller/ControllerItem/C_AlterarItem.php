@@ -4,7 +4,7 @@
 
 		//Página de controle responsável pela alteração de um determinado item
     session_start();
-    $umId = $_SESSION['id'];
+    $umId = $_SESSION['usuario'];
 
     $umNome= $_POST['nomeItem'];
   	$umTamanho= $_POST['tamanhoItem'];
@@ -19,6 +19,5 @@
 
     $itemDAO = new itemDAO();
     $itemDAO->alterarItem($umId,$item,$conexao->getLink());
-    header('Location: ../../View/CadastrarItem.php');
-
-  ?>
+    header('Location: ../../View/PerfilAdm.php');
+?>

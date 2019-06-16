@@ -10,7 +10,7 @@
 			echo $query;
 
       if(!mysqli_query($link,$query)){
-        die ("Nãp foi possível cadastrar o item".mysqli_error($link));
+        die ("Não foi possível cadastrar o item".mysqli_error($link));
       }
       echo "Item cadastrado com sucesso";
       }

@@ -3,18 +3,17 @@
     include_once("../Model/Item.php");
     include_once("../Persistence/Connection.php");
     include_once("../Persistence/itemDAO.php");
+    include_once("../Controller/C_ControleLogin.php");
 		//Váriavel que recebe o resultado da busca de um determinado item
 		$resultado = null;
     if (isset($_POST["op"])) {
         $umNome= $_POST['nomeItem'];
-
         $umItem = new Item($umNome, " ", " ", " ", 0);
 
         $conexao = new Connection("localhost", "root", "", "jg_confeccoes");
         $conexao->conectar();
 
         $itemDAO = new itemDAO();
-
         $resultado = $itemDAO->buscarItem($umNome, $conexao->getLink());
     }
 ?>
@@ -37,20 +36,21 @@
 	<body>
 		<div class = "center-align">	<img src="Logo.png" class = "responsive-img"> </div>
 		<div id="cabecalho">
-			 <a id="logout" href="../MainMenu.php" >Sair</a>
+			 <a id="logout" class="waves-effect waves-light btn-small" href="../MainMenu.php" >Sair</a>
 	 	</div>
+    <!-- Monta campo de preenchimento de dados -->
 		<form class = "container" action = "../Controller/ControllerItem/C_CadastrarItem.php" method="post">
 			Nome:<input type="text" name="nomeItem"><br>
 			Tamanho:<input type="text" name="tamanhoItem"><br>
 			Categoria:<input type="text" name="categoriaItem"><br>
 			Preco:<input class="materialize-textarea" type="text" name="precoItem"><br>
 			Quantidade:<input type="number" name="quantidadeItem"><br>
-			<input type="submit" value="Cadastrar Item">
+			<input type="submit" class="waves-effect waves-light btn-small" value="Cadastrar Item">
 	  </form>
 		<form class = "container"  method="post">
 			<input hidden type="text" name="op" value="busca">
 			<br>Buscar Item:<input type="text" name="nomeItem">
-			<input type = "submit" value = "Buscar Item">
+			<input type = "submit" class="waves-effect waves-light btn-small" value = "Buscar Item">
 		</form>
 		<?php if (isset($_POST["op"])): ?>
 			<!-- Monta a tabela caso exista o item buscado -->
@@ -77,14 +77,14 @@
 									<td><?= $row[4] ?></td>
 									<td><?= $row[5] ?></td>
 									<td>
-										<a href="./AlterarItem.php?id=<?= $row[0] ?>"><button>alterar</button></a>
-										<a href="../Controller/ControllerItem/C_ExcluirItem.php?IdItem=<?= $row[0] ?>"><button>excluir</button></a>
+										<a class="waves-effect waves-light btn-small" href="./AlterarItem.php?id=<?= $row[0] ?>">alterar</a>
+										<a class="waves-effect waves-light btn-small" href="../Controller/ControllerItem/C_ExcluirItem.php?IdItem=<?= $row[0] ?>">excluir</a>
 								  </td>
 								</tr>
 						<?php endwhile; ?>
 					</tbody>
 			<?php else: ?>
-				<h2>Não há registros cadastrados.</h2>
+				<h4 class = "container">Não há registros cadastrados.</h4>
 			<?php endif; ?>
 		<?php endif; ?>
 	</body>

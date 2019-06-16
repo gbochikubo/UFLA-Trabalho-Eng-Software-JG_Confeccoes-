@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <?php
-//Página de alteração dos dados de um determinado item
-session_start();
-//Id referente ao item de alteração, recebido da tabela após clicar na opção alterar item
-$IdItem = $_GET["id"];
-$_SESSION['id']=$IdItem;
+	include_once("../Controller/C_ControleLogin.php");
+	//Página de alteração dos dados de um determinado item
+	session_start();
+	//Id referente ao item de alteração, recebido da tabela após clicar na opção alterar item
+	$IdItem = $_GET["id"];
+	$_SESSION['id']=$IdItem;
 ?>
 <html lang="pt-br">
 	<header>
@@ -28,8 +29,8 @@ $_SESSION['id']=$IdItem;
 			Categoria:<input type="text" name="categoriaItem"><br>
 			Preco:<input type="text" name="precoItem"><br>
 			Quantidade:<input type="number" name="quantidadeItem"><br>
-			<input type="submit" value="Alterar Item">
-	    <a href="PerfilAdm.php">Voltar</a><br>
+			<input type="submit" class="waves-effect waves-light btn-small" value="Alterar Item">
+	    <a href="PerfilAdm.php" class="waves-effect waves-light btn-small" >Voltar</a><br>
 	  </form>
 	</body>
 </html>
