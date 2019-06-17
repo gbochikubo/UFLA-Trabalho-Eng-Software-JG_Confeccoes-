@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<?php session_start(); ?>
+	<?php session_start();
+		//if(isset($_GET['logout']) && $_GET['logout']=='true'){
+	//		unset($_SESSION['usuario']);
+	//		echo "SAIU";
+	//	}
+	 ?>
 	<!--Página inicial do sistema-->
 	<head>
 		<meta charset="utf-8">

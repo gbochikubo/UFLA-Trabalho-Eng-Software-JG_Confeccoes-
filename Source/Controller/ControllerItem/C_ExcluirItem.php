@@ -11,5 +11,5 @@
  		$itemDAO = new itemDAO();
 		$itemDAO->excluirItem($umId,$conexao->getLink());
 
-		header('Location: ../../View/PerfilAdm.php');
+		header('Location: ../../View/PerfilAdmItem.php');
 ?>

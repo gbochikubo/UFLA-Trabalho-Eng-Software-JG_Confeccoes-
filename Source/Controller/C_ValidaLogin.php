@@ -2,7 +2,6 @@
   session_start();
   include_once("../Persistence/Connection.php");
 
-
   $conexao = new Connection("localhost","root","","jg_confeccoes");
   $conexao->conectar();
 
@@ -27,6 +26,7 @@
   //Verifica se é um funcionário e se os dados de email e senha são validos, caso sejá é redirecionado para a
   //tela de PerfilAdm
   if(mysqli_num_rows($consultaFuncionario)==1){
+    $_SESSION['usuario']=$usuario;
     header('Location: ../View/PerfilAdm.php');
     exit();
   }
