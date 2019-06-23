@@ -1,3 +1,20 @@
+<?php
+		//Página de administração do sistema após ser realizado o login com a conta de funcionário
+    include_once("../Model/Item.php");
+    include_once("../Persistence/Connection.php");
+    include_once("../Persistence/itemDAO.php");
+    include_once("../Controller/C_ControleLogin.php");
+		//Váriavel que recebe o resultado da busca de um determinado item
+
+    var_dump($_SESSION['carrinho']);
+
+    $conexao = new Connection("localhost", "root", "", "jg_confeccoes");
+    $conexao->conectar();
+
+    $itemDAO = new itemDAO();
+    $resultado = $itemDAO->buscarTodosItens($conexao->getLink());
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<!--Página inicial do sistema-->
@@ -12,6 +29,11 @@
 				top:10px;
 				right:30px;
 			}
+			.opcoes{
+				display: flex;
+				justify-content: space-between;
+				flex-direction:
+			}
 		</style>
 	</header>
 	<body>
@@ -19,8 +41,53 @@
 		<ul>
 			<div id="cabecalho">
 					<a id="alterarDados" class="waves-effect waves-light btn-small" href="AlterarDados.php">Alterar Dados</a>&nbsp
-					<a id="login" class="waves-effect waves-light btn-small" href="../MainMenu.php">Sair</a>&nbsp
+          <form  action = "../Controller/C_ControllerLogout.php" method="post">
+						  <button type="submit" class="waves-effect waves-light btn-small"> Sair</button>
+          </form>
 		 	</div>
 		</ul>
+			<div class="row">
+				<div class = "container opcoes">
+					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmItem.php">Camisetas</a>
+					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmEntregas.php">Calcas</a>
+						<a class="waves-effect waves-light btn-small"  href="./PerfilAdmRelatorio.php">Bermudas</a>
+					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmRelatorio.php">Tenis</a>
+					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmRelatorio.php">Moletons</a>
+					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmRelatorio.php">Jaquetas</a>
+				</div>
+			</div>
+			<?php if (mysqli_num_rows($resultado) > 0): ?>
+				<div class = "container">
+					<table style="width:100%" border="1" class = "highlight container">
+						<thead>
+							<tr>
+								<th> id </th>
+								<th>Nome</th>
+								<th>Tamanho</th>
+								<th>Categoria</th>
+								<th>Preco</th>
+								<th>Quantidade</th>
+								<th>Adicionar item ao carrinho</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php while ($row = mysqli_fetch_row($resultado)): ?>
+									<tr>
+										<td><?= $row[0] ?></td>
+										<td><?= $row[1] ?></td>
+										<td><?= $row[2] ?></td>
+										<td><?= $row[3] ?></td>
+										<td><?= $row[4] ?></td>
+										<td><input id="quantidadeItens" type="number" size = "auto"></td>
+										<td>
+											<a class="waves-effect waves-light btn-small" href="../Controller/ControleCarrinho.php?operacao=ADICIONA&idItem=<?= $row[0] ?>">Adicionar ao carrinho</a>
+										</td>
+									</tr>
+							<?php endwhile; ?>
+						</tbody>
+				<?php else: ?>
+					<h4 class = "container">Não há registros cadastrados.</h4>
+				<?php endif; ?>
+		</div>
 	</body>
 </html>

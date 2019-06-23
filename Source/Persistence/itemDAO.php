@@ -46,5 +46,18 @@
          }
          echo "Item alterado com sucesso";
       }
+
+      public function buscarTodosItens($link){
+        $query = "SELECT * FROM `item`";
+        $r = mysqli_query($link, $query);
+        if (!$r) {
+          echo "Erro do banco de dados, não foi possível consultar o banco de dados\n";
+          echo 'Erro MySQL: ' . mysqli_error();
+          exit;
+        }
+        return $r;
+      }
+
+
   }
 ?>

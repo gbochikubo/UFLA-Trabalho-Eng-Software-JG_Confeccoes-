@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<?php session_start();
-		//if(isset($_GET['logout']) && $_GET['logout']=='true'){
-	//		unset($_SESSION['usuario']);
-	//		echo "SAIU";
-	//	}
+
+	if(!isset($_SESSION['carrinho'])){
+		$_SESSION['carrinho'] = array();
+	} 
 	 ?>
 	<!--Página inicial do sistema-->
 	<head>

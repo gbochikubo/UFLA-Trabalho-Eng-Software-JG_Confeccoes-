@@ -11,6 +11,7 @@
       $this->endereco = $umEndereco;
       $this->email = $umEmail;
       $this->senha = $umaSenha;
+      $this->carrinho = array();
     }
     public function getNome(){
       return $this->nome;

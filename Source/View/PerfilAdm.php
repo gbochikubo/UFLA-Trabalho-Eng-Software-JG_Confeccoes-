@@ -1,6 +1,7 @@
 <?php
 		//Página de administração do sistema após ser realizado o login com a conta de funcionário
-    include_once("../Controller/C_ControleLogin.php");
+    include_once("../Controller/C_ControleLoginAdm.php");
+
 		//Váriavel que recebe o resultado da busca de um determinado item
 ?>
 

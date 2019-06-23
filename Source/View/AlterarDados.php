@@ -1,5 +1,6 @@
 <?php include_once("../Persistence/Connection.php");
       include_once("../Persistence/itemDAO.php");
+      include_once("../Controller/C_ControleLogin.php");
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +21,7 @@
 		  Endereco:<input type="text" name="enderecoCliente"><br>
       Tefone:<input type="text" name="telefoneCliente"><br>
 			Senha:<input type="password" name="senhaCliente"><br>
-      <input class="waves-effect waves-light btn-small" type="submit" value="AlterarDados">&nbsp
+      <input class="waves-effect waves-light btn-small" type="submit" value="Alterar Dados">&nbsp
       <a class="waves-effect waves-light btn-small" href="../Controller/ControllerCliente/C_ExcluirCliente.php">Excluir Conta</a>&nbsp
       <a class="waves-effect waves-light btn-small" href="PerfilCliente.php">Voltar</a><br>
 	  </form>

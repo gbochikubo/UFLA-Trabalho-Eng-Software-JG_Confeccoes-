@@ -3,7 +3,7 @@
     include_once("../Model/Item.php");
     include_once("../Persistence/Connection.php");
     include_once("../Persistence/itemDAO.php");
-    include_once("../Controller/C_ControleLogin.php");
+    include_once("../Controller/C_ControleLoginAdm.php");
 		//Váriavel que recebe o resultado da busca de um determinado item
 		$resultado = null;
     if (isset($_POST["op"])) {

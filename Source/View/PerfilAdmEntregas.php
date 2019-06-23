@@ -3,7 +3,7 @@
     include_once("../Model/TipoEntrega.php");
     include_once("../Persistence/Connection.php");
     include_once("../Persistence/tipoEntregaDAO.php");
-    include_once("../Controller/C_ControleLogin.php");
+    include_once("../Controller/C_ControleLoginAdm.php");
 		//Váriavel que recebe o resultado da busca de uma determinada entrega
 		$resultado = null;
     if (isset($_POST["opEntrega"])) {
