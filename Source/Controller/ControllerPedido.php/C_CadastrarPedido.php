@@ -3,8 +3,11 @@
       include_once("../../Persistence/pedidoDAO.php");
 
     //Página de controle responsável pela realizacao de um pedido
-    $umTempo= $_POST['tempoEntrega'];
-    $umValor= $_POST['valorEntrega'];
+    $numCartao= $_POST['numCartao'];
+    $nomeCartao= $_POST['nomeCartao'];
+    $dataCartao= $_POST['dataCartao'];
+    $codigoCartao= $_POST['codigoCartao'];
+    $tipoEntrega= $_POST['nomeCartao'];
 
     $entrega = new TipoEntrega($umTipo, $umTempo, $umValor);
 
