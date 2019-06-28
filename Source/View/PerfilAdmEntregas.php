@@ -1,11 +1,11 @@
 <?php
-		//Página de administração de entregas do sistema após ser realizado o login com a conta de funcionário
+        //Página de administração de entregas do sistema após ser realizado o login com a conta de funcionário
     include_once("../Model/TipoEntrega.php");
     include_once("../Persistence/Connection.php");
     include_once("../Persistence/tipoEntregaDAO.php");
     include_once("../Controller/C_ControleLoginAdm.php");
-		//Váriavel que recebe o resultado da busca de uma determinada entrega
-		$resultado = null;
+        //Váriavel que recebe o resultado da busca de uma determinada entrega
+        $resultado = null;
     if (isset($_POST["opEntrega"])) {
         $umTipo= $_POST['nomeEntrega'];
         $umaEntrega = new TipoEntrega($umTipo, 0, 0);

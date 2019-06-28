@@ -1,8 +1,8 @@
 <?php
-		//Página de administração do sistema após ser realizado o login com a conta de funcionário
-    include_once("../Controller/C_ControleLoginAdm.php");
+        //Página de administração do sistema após ser realizado o login com a conta de funcionário
+    include_once("../Controller/C_LoginAdm.php");
 
-		//Váriavel que recebe o resultado da busca de um determinado item
+        //Váriavel que recebe o resultado da busca de um determinado item
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,9 @@
 	<body>
 		<div class = "center-align">	<img src="Logo.png" class = "responsive-img"> </div>
 		<div id="cabecalho">
-			 <a id="logout" class="waves-effect waves-light btn-small" href="../MainMenu.php">Sair</a>
+      <form  action = "../Controller/C_ControllerLogout.php" method="post">
+         <button type="submit" class="waves-effect waves-light btn-small"> Sair</button>
+      </form>
 	 	</div>
     <div class="row">
       <div class = "container opcoes">

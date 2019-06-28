@@ -1,12 +1,9 @@
 <?php
-		//Página de administração do sistema após ser realizado o login com a conta de funcionário
+        //Página de administração do sistema após ser realizado o login com a conta de Cliente
     include_once("../Model/Item.php");
     include_once("../Persistence/Connection.php");
     include_once("../Persistence/itemDAO.php");
     include_once("../Controller/C_ControleLogin.php");
-		//Váriavel que recebe o resultado da busca de um determinado item
-
-    var_dump($_SESSION['carrinho']);
 
     $conexao = new Connection("localhost", "root", "", "jg_confeccoes");
     $conexao->conectar();
@@ -29,6 +26,11 @@
 				top:10px;
 				right:30px;
 			}
+      #cabecalho2 {
+        position:absolute;
+        bottom:10px;
+        right:250px;
+      }
 			.opcoes{
 				display: flex;
 				justify-content: space-between;
@@ -47,7 +49,7 @@
 		 	</div>
 		</ul>
 			<div class="row">
-				<div class = "container opcoes">
+				<div class = "container opcoes" class ="container">
 					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmItem.php">Camisetas</a>
 					<a class="waves-effect waves-light btn-small"  href="./PerfilAdmEntregas.php">Calcas</a>
 						<a class="waves-effect waves-light btn-small"  href="./PerfilAdmRelatorio.php">Bermudas</a>
@@ -66,7 +68,6 @@
 								<th>Tamanho</th>
 								<th>Categoria</th>
 								<th>Preco</th>
-								<th>Quantidade</th>
 								<th>Adicionar item ao carrinho</th>
 							</tr>
 						</thead>
@@ -78,9 +79,8 @@
 										<td><?= $row[2] ?></td>
 										<td><?= $row[3] ?></td>
 										<td><?= $row[4] ?></td>
-										<td><input id="quantidadeItens" type="number" size = "auto"></td>
 										<td>
-											<a class="waves-effect waves-light btn-small" href="../Controller/ControleCarrinho.php?operacao=ADICIONA&idItem=<?= $row[0] ?>">Adicionar ao carrinho</a>
+											<a class="waves-effect waves-light btn-small" href="../Controller/C_ControleCarrinho.php?operacao=ADICIONA&idItem=<?= $row[0] ?>">Adicionar ao carrinho</a>
 										</td>
 									</tr>
 							<?php endwhile; ?>
@@ -89,5 +89,9 @@
 					<h4 class = "container">Não há registros cadastrados.</h4>
 				<?php endif; ?>
 		</div>
+    <div id="cabecalho2">
+        <a class="waves-effect waves-light btn-small"  href="./PaginaCarrinho.php">Ir para Carrinho</a>
+    </div>
+
 	</body>
 </html>

@@ -1,8 +1,6 @@
 <?php
-// é basicamente o sair do site
+// Pagina responsavel pelo logout do site
 session_start(); // pega a seção para poder verificar se o usuario não esta autenticado
-session_destroy(); // destroi a sessao que foi utilizada
-header('Location: ../MainMenu.php'); // volta para tela de login
+session_destroy(); // destroi as sessoes que foram utilizadas
+header('Location: ../MainMenu.php');
 exit();
-
-?>

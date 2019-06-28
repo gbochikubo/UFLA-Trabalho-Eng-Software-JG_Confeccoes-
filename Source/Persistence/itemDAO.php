@@ -36,6 +36,18 @@
   			return $r;
   		}
 
+      //Função que realiza a busca de um determinado item no banco de dados a partir do id
+      public function buscarItemId($idItem,$link){
+        $query = "SELECT * FROM `item` WHERE idItem = '".$idItem."'";
+        $r = mysqli_query($link, $query);
+        if (!$r) {
+          echo "Erro do banco de dados, não foi possível consultar o banco de dados\n";
+          echo 'Erro MySQL: ' . mysqli_error();
+          exit;
+        }
+        return $r;
+      }
+
       //Função que altera um determinado item no banco de dados a partir do id
       public function alterarItem($umId,$Item,$link){
         $query = "UPDATE `item` SET Nome = '".$Item->getNome()."', Tamanho = '".$Item->getTamanho()."', Categoria = '".$Item->getCategoria()."'

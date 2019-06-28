@@ -17,7 +17,7 @@
 
 	$itemDAO = new itemDAO();
 	$itemDAO->cadastrarItem($item,$conexao->getLink());
-	header('Location: ../../View/PerfilAdm.php');
+	header('Location: ../../View/PerfilAdmItem.php');
 
 
 ?>

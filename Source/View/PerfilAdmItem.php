@@ -1,11 +1,11 @@
 <?php
-		//Página de administração do sistema após ser realizado o login com a conta de funcionário
+        //Página de administração do sistema após ser realizado o login com a conta de funcionário
     include_once("../Model/Item.php");
     include_once("../Persistence/Connection.php");
     include_once("../Persistence/itemDAO.php");
-    include_once("../Controller/C_ControleLoginAdm.php");
-		//Váriavel que recebe o resultado da busca de um determinado item
-		$resultado = null;
+    include_once("../Controller/C_LoginAdm.php");
+        //Váriavel que recebe o resultado da busca de um determinado item
+        $resultado = null;
     if (isset($_POST["op"])) {
         $umNome= $_POST['nomeItem'];
         $umItem = new Item($umNome, " ", " ", " ", 0);

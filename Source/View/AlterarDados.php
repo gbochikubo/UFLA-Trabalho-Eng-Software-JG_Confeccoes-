@@ -1,7 +1,7 @@
 <?php include_once("../Persistence/Connection.php");
       include_once("../Persistence/itemDAO.php");
       include_once("../Controller/C_ControleLogin.php");
-
+      //Pagina responsavel pel alteraco de dados de um cliente
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

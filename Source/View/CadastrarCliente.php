@@ -1,5 +1,6 @@
 <?php include_once("../Persistence/Connection.php");
       include_once("../Persistence/itemDAO.php");
+      //Pagina responsavel pelo cadastramento de um cliente no sistema
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

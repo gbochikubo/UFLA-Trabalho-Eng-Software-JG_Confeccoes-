@@ -46,7 +46,7 @@
       return $this->endereco;
     }
     public function setEndereco($umEndereco){
-      $this->umEndereco;
+      $this->umEndereco=$umEndereco;
     }
 
     public function getEmail(){
