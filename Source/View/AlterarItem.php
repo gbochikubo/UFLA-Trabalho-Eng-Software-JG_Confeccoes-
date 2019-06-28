@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <?php
-	include_once("../Controller/C_ControleLoginAdm.php");
-	
-	//Página de alteração dos dados de um determinado item
+    include_once("../Controller/C_LoginAdm.php");
 
-	//Id referente ao item de alteração, recebido da tabela após clicar na opção alterar item
-	$IdItem = $_GET["id"];
-	$_SESSION['idItem']=$IdItem;
+    //Página de alteração dos dados de um determinado item
+
+    //Id referente ao item de alteração, recebido da tabela após clicar na opção alterar item
+    $IdItem = $_GET["id"];
+    $_SESSION['idItem']=$IdItem;
 ?>
 <html lang="pt-br">
 	<header>

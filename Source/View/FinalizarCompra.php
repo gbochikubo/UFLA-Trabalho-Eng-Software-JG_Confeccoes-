@@ -1,4 +1,7 @@
-<?php $valorTotal = $_GET["valorTotal"];
+<?php
+session_start();
+$_SESSION['valor'] = $_GET["valorTotal"];
+//$valorTotal = $_GET["valorTotal"];
   //pagina responsavel pela finalizacao de uma compra e realizamento do pedido
  ?>
 <!DOCTYPE html>
@@ -41,7 +44,7 @@
       Data Expiracao:<input type="date" name="dataCartao"><br>
       Cod. Seguranca:<input type="text" placeholder="Codigo de Seguranca" name="codigoCartao"><br>
       TipoEntrega:<input type="number" name="tipoEntrega" min=1 max=3><br>
-      <th> Total: R$<?=$valorTotal?></th><br><br>
+      <th> Total: R$<?=$_SESSION['valor']?></th><br><br>
       <input type="submit" class="waves-effect waves-light btn-small" value="Finalizar Compra">&nbsp
       <a class="waves-effect waves-light btn-small" href="PerfilCliente.php">Cancelar Compra</a><br>
     </form>

@@ -8,10 +8,9 @@
 
       public function cadastrarPedido($Pedido, $link)
       {
-          $query = "INSERT INTO `pedido` VALUES ('%d', '%s', '%d', '%s', '%d', '%s')";
+          $query = "INSERT INTO `pedido` VALUES (1,'%s', '%d', '%s', '%d', '%s')";
           $query = sprintf(
               $query,
-              $Pedido->getIdPedido(),
               $Pedido->getStatus(),
               $Pedido->getValor(),
               $Pedido->getEnderecoEntrega(),

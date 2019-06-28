@@ -19,4 +19,4 @@
 
     $clienteDAO = new clienteDAO();
     $clienteDAO->alterarDados($Cliente, $conexao->getLink());
-        header('Location: ../../View/PerfilCliente.php');
+    header('Location: ../../View/PerfilCliente.php');
