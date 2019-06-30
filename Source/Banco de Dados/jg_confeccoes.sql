@@ -1,110 +1,193 @@
--- MySQL Workbench Forward Engineering
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: 30-Jun-2019 às 06:01
+-- Versão do servidor: 10.1.40-MariaDB
+-- versão do PHP: 7.3.5
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
--- -----------------------------------------------------
--- Schema jg_confeccoes
--- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema jg_confeccoes
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `jg_confeccoes` DEFAULT CHARACTER SET utf8 ;
-USE `jg_confeccoes` ;
-
--- -----------------------------------------------------
--- Table `jg_confeccoes`.`cliente`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `jg_confeccoes`.`cliente` (
-  `Email` VARCHAR(45) NOT NULL,
-  `Cpf` VARCHAR(45) NOT NULL,
-  `Sexo` VARCHAR(1) NOT NULL,
-  `Senha` VARCHAR(45) NOT NULL,
-  `Endereco` VARCHAR(80) NOT NULL,
-  `Nome` VARCHAR(45) NOT NULL,
-  `Telefone` VARCHAR(45) NOT NULL,
-  `Funcionario` TINYINT(4) NULL DEFAULT '0',
-  PRIMARY KEY (`Email`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
--- -----------------------------------------------------
--- Table `jg_confeccoes`.`item`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `jg_confeccoes`.`item` (
-  `idItem` INT(11) NOT NULL,
-  `Nome` VARCHAR(45) NOT NULL,
-  `Tamanho` ENUM('P', 'M', 'G') NOT NULL,
-  `Categoria` VARCHAR(45) NOT NULL,
-  `Preço` INT(11) NOT NULL,
-  `Quantidade` INT(11) NOT NULL,
-  `Imagem` VARCHAR(145) NOT NULL,
-  PRIMARY KEY (`idItem`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `jg_confeccoes`
+--
 
--- -----------------------------------------------------
--- Table `jg_confeccoes`.`tipoentrega`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `jg_confeccoes`.`tipoentrega` (
-  `Tipo` INT(11) NOT NULL,
-  `Tempo` INT(11) NOT NULL,
-  `ValorFrete` FLOAT NOT NULL,
-  PRIMARY KEY (`Tipo`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+-- --------------------------------------------------------
 
+--
+-- Estrutura da tabela `cliente`
+--
 
--- -----------------------------------------------------
--- Table `jg_confeccoes`.`pedido`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `jg_confeccoes`.`pedido` (
-  `idPedido` INT(11) NOT NULL AUTO_INCREMENT,
-  `Status` VARCHAR(45) NOT NULL,
-  `Valor` FLOAT NOT NULL,
-  `EnderecoEntrega` VARCHAR(80) NOT NULL,
-  `TipoEntrega_Tipo` INT(11) NOT NULL,
-  `Cliente_Email` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idPedido`),
-  INDEX `fk_Pedido_TipoEntrega1_idx` (`TipoEntrega_Tipo` ASC) VISIBLE,
-  INDEX `fk_Pedido_Cliente1_idx` (`Cliente_Email` ASC) VISIBLE,
-  CONSTRAINT `fk_Pedido_Cliente1`
-    FOREIGN KEY (`Cliente_Email`)
-    REFERENCES `jg_confeccoes`.`cliente` (`Email`),
-  CONSTRAINT `fk_Pedido_TipoEntrega1`
-    FOREIGN KEY (`TipoEntrega_Tipo`)
-    REFERENCES `jg_confeccoes`.`tipoentrega` (`Tipo`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+CREATE TABLE `cliente` (
+  `Email` varchar(45) NOT NULL,
+  `Cpf` varchar(45) NOT NULL,
+  `Sexo` varchar(1) NOT NULL,
+  `Senha` varchar(45) NOT NULL,
+  `Endereco` varchar(80) NOT NULL,
+  `Nome` varchar(45) NOT NULL,
+  `Telefone` varchar(45) NOT NULL,
+  `Funcionario` tinyint(4) DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `cliente`
+--
 
--- -----------------------------------------------------
--- Table `jg_confeccoes`.`item_has_pedido`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `jg_confeccoes`.`item_has_pedido` (
-  `Item_idItem` INT(11) NOT NULL,
-  `Pedido_idPedido` INT(11) NOT NULL,
-  `Quantidade` INT(11) NOT NULL,
-  PRIMARY KEY (`Item_idItem`, `Pedido_idPedido`),
-  INDEX `fk_Item_has_Pedido_Pedido1_idx` (`Pedido_idPedido` ASC) VISIBLE,
-  INDEX `fk_Item_has_Pedido_Item_idx` (`Item_idItem` ASC) VISIBLE,
-  CONSTRAINT `fk_Item_has_Pedido_Item`
-    FOREIGN KEY (`Item_idItem`)
-    REFERENCES `jg_confeccoes`.`item` (`idItem`),
-  CONSTRAINT `fk_Item_has_Pedido_Pedido1`
-    FOREIGN KEY (`Pedido_idPedido`)
-    REFERENCES `jg_confeccoes`.`pedido` (`idPedido`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+INSERT INTO `cliente` (`Email`, `Cpf`, `Sexo`, `Senha`, `Endereco`, `Nome`, `Telefone`, `Funcionario`) VALUES
+('Admin@gmail.com', '1111111111', 'M', '302010', 'Admin', 'Admin', '1111111', 1),
+('antonio@hotmail.com', '111223123', 'M', '12345', 'ufla', 'AAAAA', '888888', 0),
+('guilhermebarbosa@hotmail.com', '123456789', 'M', '12345', 'Rua Anibal Teodoro', 'Guilherme', '99999999', 0);
 
+-- --------------------------------------------------------
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+--
+-- Estrutura da tabela `item`
+--
+
+CREATE TABLE `item` (
+  `idItem` int(11) NOT NULL,
+  `Nome` varchar(45) NOT NULL,
+  `Tamanho` enum('P','M','G') NOT NULL,
+  `Categoria` varchar(45) NOT NULL,
+  `Preço` int(11) NOT NULL,
+  `Quantidade` int(11) NOT NULL,
+  `Imagem` varchar(145) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `item`
+--
+
+INSERT INTO `item` (`idItem`, `Nome`, `Tamanho`, `Categoria`, `Preço`, `Quantidade`, `Imagem`) VALUES
+(2, 'Moletom Addidas', 'P', 'Moletons', 150, 10, NULL),
+(3, 'Jaqueta de Couro', 'G', 'Jaquetas', 400, 30, NULL),
+(4, 'Calca jeans', 'M', 'Calcas', 100, 80, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `item_has_pedido`
+--
+
+CREATE TABLE `item_has_pedido` (
+  `Item_idItem` int(11) NOT NULL,
+  `Pedido_idPedido` int(11) NOT NULL,
+  `Quantidade` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `pedido`
+--
+
+CREATE TABLE `pedido` (
+  `idPedido` int(11) NOT NULL,
+  `Status` varchar(45) NOT NULL,
+  `Valor` float NOT NULL,
+  `EnderecoEntrega` varchar(80) NOT NULL,
+  `TipoEntrega_Tipo` int(11) NOT NULL,
+  `Cliente_Email` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tipoentrega`
+--
+
+CREATE TABLE `tipoentrega` (
+  `Tipo` int(11) NOT NULL,
+  `Tempo` int(11) NOT NULL,
+  `ValorFrete` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `tipoentrega`
+--
+
+INSERT INTO `tipoentrega` (`Tipo`, `Tempo`, `ValorFrete`) VALUES
+(1, 3, 55),
+(2, 7, 30),
+(3, 15, 20);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`Email`);
+
+--
+-- Indexes for table `item`
+--
+ALTER TABLE `item`
+  ADD PRIMARY KEY (`idItem`);
+
+--
+-- Indexes for table `item_has_pedido`
+--
+ALTER TABLE `item_has_pedido`
+  ADD PRIMARY KEY (`Item_idItem`,`Pedido_idPedido`),
+  ADD KEY `fk_Item_has_Pedido_Pedido1_idx` (`Pedido_idPedido`),
+  ADD KEY `fk_Item_has_Pedido_Item_idx` (`Item_idItem`);
+
+--
+-- Indexes for table `pedido`
+--
+ALTER TABLE `pedido`
+  ADD PRIMARY KEY (`idPedido`),
+  ADD KEY `fk_Pedido_TipoEntrega1_idx` (`TipoEntrega_Tipo`),
+  ADD KEY `fk_Pedido_Cliente1_idx` (`Cliente_Email`);
+
+--
+-- Indexes for table `tipoentrega`
+--
+ALTER TABLE `tipoentrega`
+  ADD PRIMARY KEY (`Tipo`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `item`
+--
+ALTER TABLE `item`
+  MODIFY `idItem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `item_has_pedido`
+--
+ALTER TABLE `item_has_pedido`
+  ADD CONSTRAINT `fk_Item_has_Pedido_Item` FOREIGN KEY (`Item_idItem`) REFERENCES `item` (`idItem`),
+  ADD CONSTRAINT `fk_Item_has_Pedido_Pedido1` FOREIGN KEY (`Pedido_idPedido`) REFERENCES `pedido` (`idPedido`);
+
+--
+-- Limitadores para a tabela `pedido`
+--
+ALTER TABLE `pedido`
+  ADD CONSTRAINT `fk_Pedido_Cliente1` FOREIGN KEY (`Cliente_Email`) REFERENCES `cliente` (`Email`),
+  ADD CONSTRAINT `fk_Pedido_TipoEntrega1` FOREIGN KEY (`TipoEntrega_Tipo`) REFERENCES `tipoentrega` (`Tipo`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
